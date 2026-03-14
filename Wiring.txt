@@ -1,0 +1,59 @@
+Transceiver (nRF24L01):
+
+| nRF24L01 Pin   | ESP32-S3 Pin                              |
+| -------------- | ----------------------------------------- |
+| CE             | IO7  (GPIO7)                              |
+| CSN            | IO8  (GPIO8)                              |
+| SCK            | IO18 (VSPI SCK, default SPI clock)        |
+| MOSI           | IO17 (VSPI MOSI, default SPI MOSI)        |
+| MISO           | IO16 (VSPI MISO, default SPI MISO)        |
+| IRQ (optional) | IO39 (interrupt capable pin)              |
+
+SD-Card reader:
+
+| SD-Pin | ESP32-S3 Pin                                      |
+| ------ | ------------------------------------------------- |
+| CS     | IO10 (SD_CS_PIN)                                  |
+| SCK    | IO14 (HSPI SCK, separate SPI bus)                 |
+| MOSI   | IO13 (HSPI MOSI, separate SPI bus)                |
+| MISO   | IO12 (HSPI MISO, separate SPI bus)                |
+
+GPS:
+
+| GPS Pin | ESP32-S3 Pin                                     |
+| ------- | ------------------------------------------------ |
+| TX      | IO20 (GPS RX, UART2 RX)                          |
+| RX      | IO19 (GPS TX, UART2 TX)                          |
+| VCC     | 3.3V                                             |
+| GND     | GND                                              |
+
+PCA9685 (PWM-Controller):
+
+| PCA9685 Pin | ESP32-S3 Pin                                 |
+| ----------- | -------------------------------------------- |
+| OE          | IO45 (Output Enable, active low)             |
+| SCL         | IO47 (I2C clock, I2C0 bus)                   |
+| SDA         | IO48 (I2C data, I2C0 bus)                    |
+| V+          | 5V   (External power for servos/motors)      |
+
+Sensors:
+
+DHT: DAT – IO4
+
+BMP280:
+SCL – IO6 (BMP_SCL_PIN, shared with MPU6050 on I2C1 bus)
+SDA – IO5 (BMP_SDA_PIN, shared with MPU6050 on I2C1 bus)
+CSB – VCC (I2C mode selection)
+SDO – GND (I2C address selection, 0x76)
+
+MPU6050:
+SDA – IO1 (MPU_SDA_PIN, I2C1 bus, shared with BMP280)
+SCL – IO2 (MPU_SCL_PIN, I2C1 bus, shared with BMP280)
+XDA – NC (not connected)
+XCL – NC (not connected)
+ADD – GND (address selection, pulled low, 0x68)
+INT – IO21 (interrupt pin)
+
+MOSFETs:
+ENGINE: Gate - IO3
+PARACHUTE: Gate - IO9
