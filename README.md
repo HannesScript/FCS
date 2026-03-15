@@ -7,8 +7,9 @@ This is a software designed for my own rocket's flight computer which is based o
 - rust
 - cargo
 - espup - install with `cargo install espup && espup install`
-- cargo-generate - install `cargo install cargo-generate`
 - espflash - install with `cargo install espflash --version 3.3.0`
+
+You can just run the [setup.sh](./setup.sh) file.
 
 ## Build & Flash:
 

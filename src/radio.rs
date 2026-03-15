@@ -2,16 +2,16 @@
 /// Radio Stuff
 //////////////////////////////////////////////////
 
-use heapless::string;
+use heapless::String;
 
-static RADIO_CHANNEL: u32 = 91; // not a default of the nRF24L01 for extra safety
-static RADIO_FREQUENCY: u32 = 2491_000_000; // Hz ( always 2400 MHz + 91 MHz (channel) )
+const RADIO_CHANNEL: u8 = 91; // not a default of the nRF24L01 for extra safety
+const RADIO_FREQUENCY: u32 = 2_491_000_000; // Hz (always 2400 MHz + 91 MHz)
 
-pub fn send_data(data: string) {
-    todo!("Implement");
+pub fn send_data(_data: &str) {
+    let _ = RADIO_CHANNEL;
+    let _ = RADIO_FREQUENCY;
 }
 
-pub fn get_received_data(buffer: &mut string) {
-    buffer = string::String("LAUNCH");
-    todo!("Implement");
+pub fn get_received_data(buffer: &mut String<32>) {
+    buffer.clear();
 }
