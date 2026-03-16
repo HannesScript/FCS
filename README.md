@@ -26,3 +26,7 @@ You can just run [build_and_flash.sh](./build_and_flash.sh).
 - a GPS module (e.g. GY-GPS6MV2)
 - 2x simple N-MOSFET (though please check if it is usable with a chip such as this)
 - DHT11
+
+## PCB:
+
+All the files for the PCB and the schematics are located in the [pcb folder](./pcb/). These files are ready for manufacturing and usage.
